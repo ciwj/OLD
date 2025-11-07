@@ -4,6 +4,8 @@
 
 # Add teams
 
+team add wlp.darkgreen DarkGreen
+team modify wlp.darkgreen color dark_green
 team add wlp.green Green
 team modify wlp.green color green
 team add wlp.yellow Yellow
@@ -20,6 +22,9 @@ team join wlp.green @a
 # Death checker
 scoreboard objectives add deathCheck deathCount deathCheck
 scoreboard players set @a deathCheck 0
+# Life counter
+scoreboard objectives add lives dummy
+scoreboard players set @a lives 3
 # Game state check
 scoreboard objectives add gameState dummy
 scoreboard players set $gameState gameState 0
