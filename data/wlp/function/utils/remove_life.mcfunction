@@ -3,24 +3,23 @@
 # 
 
 # Change life colour
-execute as @s[team=wlp.red] run tellraw @s ["",{"text":"RIP <3"},]
-execute as @s[team=wlp.red] run team join wlp.spec
+execute as @s[team=wlp.red] if score $gameState gameState matches 2 run tellraw @s ["",{"text":"RIP <3"},]
+execute as @s[team=wlp.red] if score $gameState gameState matches 2 run team join wlp.spec
 
-execute as @s[team=wlp.yellow] run tellraw @s ["",{"text":"You are now a "},{"text":"red","color":"red"},{"text":" life!"}]
-execute as @s[team=wlp.yellow] run team join wlp.red
+execute as @s[team=wlp.yellow] if score $gameState gameState matches 2 run tellraw @s ["",{"text":"You are now a "},{"text":"red","color":"red"},{"text":" life!"}]
+execute as @s[team=wlp.yellow] if score $gameState gameState matches 2 run team join wlp.red
 
-execute as @s[team=wlp.green] run tellraw @s[team=wlp.green] ["",{"text":"You are now a "},{"text":"yellow","color":"yellow"},{"text":" life!"}]
-execute as @s[team=wlp.green] run team join wlp.yellow
+execute as @s[team=wlp.green] if score $gameState gameState matches 2 run tellraw @s[team=wlp.green] ["",{"text":"You are now a "},{"text":"yellow","color":"yellow"},{"text":" life!"}]
+execute as @s[team=wlp.green] if score $gameState gameState matches 2 run team join wlp.yellow
 
 # Remove life from counter
-execute as @s run scoreboard players remove @s lives 1
+execute as @s if score $gameState gameState matches 2 run scoreboard players remove @s lives 1
 
 # Change dark green life colour if required
-execute as @s[team=wlp.darkgreen] if score @s lives matches 3 run tellraw @s ["",{"text":"You are now a "},{"text":"green","color":"green"},{"text":" life!"}]
-execute as @s[team=wlp.darkgreen] if score @s lives matches 3 run team join wlp.green
+execute as @s[team=wlp.darkgreen] if score @s lives matches 3 if score $gameState gameState matches 2 run tellraw @s ["",{"text":"You are now a "},{"text":"green","color":"green"},{"text":" life!"}]
+execute as @s[team=wlp.darkgreen] if score @s lives matches 3 if score $gameState gameState matches 2 run team join wlp.green
 
-execute as @s[team=wlp.darkgreen] unless score @s lives matches 3 run tellraw @s[team=wlp.darkgreen] ["You now have ",{"color":"dark_green","score":{"name":"@s","objective":"lives"}}," lives!"]
-
+execute as @s[team=wlp.darkgreen] unless score @s lives matches 3 if score $gameState gameState matches 2 run tellraw @s[team=wlp.darkgreen] ["You now have ",{"color":"dark_green","score":{"name":"@s","objective":"lives"}}," lives!"]
 
 
 #Update gamemodes
