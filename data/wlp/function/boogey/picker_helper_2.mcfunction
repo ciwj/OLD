@@ -1,5 +1,5 @@
 #
-# Boogey announcement helper function
+# Boogey announcement and selector function - runs from boogey/pick
 #
 
 execute as @r[scores={lives=2..}] run tag @s add boogey
