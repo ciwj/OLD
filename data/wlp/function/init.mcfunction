@@ -30,6 +30,8 @@ scoreboard players set $boogeyEnabled boogeyEnabled 0
 # Recipe management
 gamerule doLimitedCrafting true
 recipe give @a *
+# Player handling
+scoreboard objectives add playerHandled dummy
 
 #
 # Recipe objectives - enabled by default
