@@ -7,7 +7,6 @@ execute as @s if score $gameState gameState matches 0 run weather clear
 execute as @s if score $gameState gameState matches 0 run effect give @a[tag=player] minecraft:saturation 5 5
 execute as @s if score $gameState gameState matches 0 run effect give @a[tag=player] minecraft:instant_health 1 4
 
-execute as @s if score $gameState gameState matches 0 run scoreboard players set $gameState gameState 2
 # Set life count
 execute if score $gameState gameState matches 0 unless score $lives lives matches 0 run scoreboard players operation @a[tag=player] lives = $lives lives
 execute as @a[tag=player] if score $gameState gameState matches 0 if score $lives lives matches 0 store result score @s lives run random value 2..7
@@ -39,3 +38,5 @@ execute as @a[tag=player,scores={lives=4..}] if score $gameState gameState match
 execute as @a[tag=player,scores={lives=3}] if score $gameState gameState matches 0 run title @s subtitle ["You have ",{"color":"green","score":{"name":"@s","objective":"lives"}}," lives"]
 execute as @a[tag=player,scores={lives=2}] if score $gameState gameState matches 0 run title @s subtitle ["You have ",{"color":"yellow","score":{"name":"@s","objective":"lives"}}," lives"]
 execute as @a[tag=player,scores={lives=1}] if score $gameState gameState matches 0 run title @s subtitle ["You have ",{"color":"red","score":{"name":"@s","objective":"lives"}}," lives"]
+
+execute as @s if score $gameState gameState matches 0 run scoreboard players set $gameState gameState 2

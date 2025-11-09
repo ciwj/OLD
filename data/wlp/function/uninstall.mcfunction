@@ -26,6 +26,8 @@ scoreboard objectives remove gameState
 scoreboard objectives remove boogeyEnabled
 # Recipe management
 gamerule doLimitedCrafting false
+# Player handling
+scoreboard objectives remove playerHandled
 
 #
 # Recipe objectives
@@ -34,3 +36,9 @@ gamerule doLimitedCrafting false
 scoreboard objectives remove saddleRecipe
 scoreboard objectives remove tntRecipe
 scoreboard objectives remove nametagRecipe
+
+#
+# Mob egg drop objectives
+#
+
+scoreboard objectives remove creeperEggEnabled
