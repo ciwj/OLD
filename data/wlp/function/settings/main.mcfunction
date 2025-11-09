@@ -8,6 +8,8 @@ tellraw @s [{"text":"----------\nwrpt's Life Pack Settings","bold":true},"\n\n"]
 tellraw @s ["Boogey: ",{"text":"Enabled","color":"green","click_event":{"action":"run_command","command":"function wlp:boogey/enable"}}," | ",{"text":"Disabled","color":"red","click_event":{"action":"run_command","command":"function wlp:boogey/disable"}}," (",{"score":{"name":"$boogeyEnabled","objective":"boogeyEnabled"},"hover_event":{"action":"show_text","value":"0 - Disabled, 1 - Enabled"}},")"]
 # Alternative recipes menu
 tellraw @s ["Alternative Recipes: ",{"text":"[Click Here]","click_event":{"action":"run_command","command":"function wlp:settings/alt_recipes_menu"}}]
+# Spawn eggs menu
+tellraw @s ["Spawn Egg Drops: ",{"text":"[Click Here]","click_event":{"action":"run_command","command":"function wlp:settings/mob_eggs"}}]
 # Set lives
 tellraw @a [{"text":"Lives","hover_event":{"action":"show_text","value":"Enter number of lives. 0 = random."}},": [",{"text":"Click Here","click_event":{"action":"suggest_command","command":"/scoreboard players set $lives lives "}},"]"]
 # Set game players
