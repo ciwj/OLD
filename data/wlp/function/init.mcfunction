@@ -52,3 +52,33 @@ scoreboard players set $nametagRecipe saddleRecipe 1
 
 scoreboard objectives add creeperEggEnabled dummy
 scoreboard players set $creeperEggEnabled creeperEggEnabled 1
+
+scoreboard objectives add blazeEggEnabled dummy
+scoreboard players set $blazeEggEnabled blazeEggEnabled 1
+
+scoreboard objectives add breezeEggEnabled dummy
+scoreboard players set $breezeEggEnabled breezeEggEnabled 1
+
+scoreboard objectives add drownedEggEnabled dummy
+scoreboard players set $drownedEggEnabled drownedEggEnabled 1
+
+scoreboard objectives add endermanEggEnabled dummy
+scoreboard players set $endermanEggEnabled endermanEggEnabled 1
+
+scoreboard objectives add zombieEggEnabled dummy
+scoreboard players set $zombieEggEnabled zombieEggEnabled 1
+
+scoreboard objectives add skeletonEggEnabled dummy
+scoreboard players set $skeletonEggEnabled skeletonEggEnabled 1
+
+scoreboard objectives add slimeEggEnabled dummy
+scoreboard players set $slimeEggEnabled slimeEggEnabled 1
+
+scoreboard objectives add spiderEggEnabled dummy
+scoreboard players set $spiderEggEnabled spiderEggEnabled 1
+
+scoreboard objectives add witchEggEnabled dummy
+scoreboard players set $witchEggEnabled witchEggEnabled 1
+
+scoreboard objectives add cavespiderEggEnabled dummy
+scoreboard players set $cavespiderEggEnabled cavespiderEggEnabled 1
