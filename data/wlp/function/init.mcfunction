@@ -30,6 +30,9 @@ scoreboard players set $boogeyEnabled boogeyEnabled 0
 # Recipe management
 gamerule doLimitedCrafting true
 recipe give @a *
+# Curse handling
+scoreboard objectives add cursedToDeath dummy
+scoreboard players set @a cursedToDeath 0
 # Player handling
 scoreboard objectives add playerHandled dummy
 

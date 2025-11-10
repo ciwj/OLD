@@ -8,6 +8,7 @@ $execute as $(username) if score $(username) lives matches 1 unless score $gameS
 $execute as $(username) if score $(username) lives matches 1 unless score $gameState gameState matches 0 run summon lightning_bolt ~ ~ ~
 $execute as $(username) if score $(username) lives matches 1 unless score $gameState gameState matches 0 run team join wlp.spec
 
+$execute as $(username) if score $(username) lives matches 2 unless score $gameState gameState matches 0 run tag @s remove boogey
 $execute as $(username) if score $(username) lives matches 2 unless score $gameState gameState matches 0 run tellraw @s ["",{"text":"You are now a "},{"text":"red","color":"red"},{"text":" life!"}]
 $execute as $(username) if score $(username) lives matches 2 unless score $gameState gameState matches 0 run team join wlp.red
 

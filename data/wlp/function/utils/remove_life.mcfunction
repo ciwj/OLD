@@ -7,6 +7,7 @@ execute as @s[team=wlp.red] unless score $gameState gameState matches 0 run tell
 execute as @s[team=wlp.red] unless score $gameState gameState matches 0 run summon lightning_bolt ~ ~ ~
 execute as @s[team=wlp.red] unless score $gameState gameState matches 0 run team join wlp.spec
 
+execute as @s[team=wlp.yellow] unless score $gameState gameState matches 0 run tag @s remove boogey
 execute as @s[team=wlp.yellow] unless score $gameState gameState matches 0 run tellraw @s ["",{"text":"You are now a "},{"text":"red","color":"red"},{"text":" life!"}]
 execute as @s[team=wlp.yellow] unless score $gameState gameState matches 0 run team join wlp.red
 
